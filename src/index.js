@@ -6,7 +6,7 @@ import { crawling } from './scheduler.js';
 
 const app = express();
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 const time = (req,res,next) => {
     console.log('time:', new Date());
