@@ -8,13 +8,15 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
+const crawling_url = '';
+
 const time = (req,res,next) => {
     console.log('time:', new Date());
 }
 
 // 7 : s
 const task = schedule('* * * * 7',() => {
-    crawling();
+    crawling(crawling_url);
 },{
     scheduled: false
 });
