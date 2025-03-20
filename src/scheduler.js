@@ -1,9 +1,9 @@
 import fetch from 'node-fetch';
 
-const crawling = (url) =>{
+const crawling = async (url) =>{
     console.log('time:', new Date());
     
-    const response =  fetch('',{
+    const response = await fetch('',{
         method: 'post',
         body: JSON.stringify(''),
         headers : {'Content-Type':'application/json'}
