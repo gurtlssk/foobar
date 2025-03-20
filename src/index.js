@@ -12,7 +12,8 @@ const time = (req,res,next) => {
     console.log('time:', new Date());
 }
 
-const task = schedule('30 * * * * *',() => {
+// 7 : s
+const task = schedule('* * * * 7',() => {
     crawling();
 },{
     scheduled: false
